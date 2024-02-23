@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bus4Student</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+    body {
+      font-family: "Outfit", sans-serif;
+    }
+
+    .bttn-schedule {
+      color: #ffffff; /* Font color */
+      background-color: #fba834; /* Background color */
+      border-radius: 0.5rem; /* Border radius */
+      border: none;
+      padding: 0.2rem 0.5rem;
+      font-weight: 600;
+    }
+    .jumbotron-custom {
+      background-color: #7bd3ea;
+    }
+  </style>
+  <body>
+    <!-------------------------------------------- Navigation Bar ------------------------------------------>
+    <nav
+      class="navbar navbar-expand-lg bg-body-tertiary d-flex justify-content-center fixed-top"
+    >
+      <div class="container">
+        <!-- TODO: Logo and Button -->
+        <ul class="navbar-nav align-items-center gap-5 flex-row">
+          <li class="nav-item">
+            <a class="navbar-brand" href="#">Bus4Student</a>
+          </li>
+          <li class="nav-item">
+            <button type="button" class="bttn-schedule btn-md">
+              <a class="nav-link" href="schedule.html">See bus schedule</a>
+            </button>
+          </li>
+        </ul>
+        <!-- TODO: Button appear when small screen  -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- TODO: This is the nav-items -->
+
+        <!-- TODO : Collapse nav-item -->
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav align-items-center gap-5 nav-underline py-1">
+            <li class="nav-item px-1">
+              <a class="nav-link" href="#why-started"
+                >Why this project started</a
+              >
+            </li>
+            <li class="nav-item px-1">
+              <a class="nav-link" href="#FAQS">FAQs</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-------------------------------------------- Navigation Bar ------------------------------------------>
+
+    <!-------------------------------------------- Hero Section -------------------------------------------->
+    <section class="hero text-black text-center mt-2 px-3">
+      <div class="container py-5 mt-5">
+        <div class="d-flex flex-column gap-1">
+          <h1 class="display-3">Focus on your classes,</h1>
+          <h1 class="display-3">not transportation</h1>
+        </div>
+
+        <p class="lead">See the bus schedule and never miss the bus</p>
+        <a href="schedule.html" class="btn btn-dark btn-lg"
+          >See bus schedule now</a
+        >
+      </div>
+    </section>
+    <!-------------------------------------------- Hero Section -------------------------------------------->
+
+    <!-------------------------------------------- Why this project started-------------------------------------------->
+    <div
+      class="jumbotron custom-jumb d-flex row justify-content-center align-items-center px-4"
+      id="why-started"
+    >
+      <br />
+      <div
+        class="col-md-8 text-center bg-light px-3 py-3 rounded border border-primary-subtle"
+      >
+        <h1 class="display-4">Why This Project Started?</h1>
+        <p class="lead">
+          Bus4Student is a software project that help student especially for the
+          upstart in University Putra Malaysia.Student in university rely on the
+          bus transportation to go to class or carried out activities. However,
+          the unclear bus schedule, long awaiting time for bus and late bus
+          arrive are the main problem that student face. This project providing
+          the platform for students to easily access the bus schedule and ensure
+          they never miss the bus.
+        </p>
+        <a class="btn btn-primary btn-l" href="#" role="button">Learn more</a>
+      </div>
+    </div>
+    <!-------------------------------------------- Why this project started-------------------------------------------->
+    <!-------------------------------------------- Ferequently Asked Question -------------------------------------------->
+    <section id="FAQS" class="terms-services mt-3 mb-5">
+      <div class="container">
+        <h2>Frequently asked questions</h2>
+        <div class="accordion" id="accordionExample">
+          <!-- TODO: Is this project from collaboration with UPM administration -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                Is this project from collaboration with UPM administration?
+              </button>
+            </h2>
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse show"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <strong
+                  >No, this project solely maintain by third party which is the
+                  student of UPM itself</strong
+                >
+                <br />
+                But in the future the collaboration with UPM administration is
+                possible to make this project more efficient and reliable.
+              </div>
+            </div>
+          </div>
+          <!-- TODO: Terms of services -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
+              >
+                Terms of services
+              </button>
+            </h2>
+            <div
+              id="collapseTwo"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                By using Bus4Student you confirm your acceptance of, and agree
+                to be bound by, these terms and conditions.
+                <br />
+                It is not warranted that Bus4Student will meet your requirements
+                or that its operation will be uninterrupted or error free. All
+                express and implied warranties or conditions not stated in this
+                Agreement (including without limitation, loss of profits, loss
+                or corruption of data, business interruption or loss of
+                contracts), so far as such exclusion or disclaimer is permitted
+                under the applicable law are excluded and expressly disclaimed.
+                This Agreement does not affect your statutory rights
+              </div>
+            </div>
+          </div>
+          <!-- TODO: Privacy Policy -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseThree"
+                aria-expanded="false"
+                aria-controls="collapseThree"
+              >
+                Privacy Policy
+              </button>
+            </h2>
+            <div
+              id="collapseThree"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                Your privacy is important to us. It is Bus4Student's policy to
+                respect your privacy regarding any information we may collect
+                from you across our website, and other sites we own and operate.
+                We only ask for personal information when we truly need it to
+                provide a service to you. We collect it by fair and lawful
+                means, with your knowledge and consent. We also let you know why
+                we're collecting it and how it will be used.
+                <strong>
+                  We don't share any personally identifying information publicly
+                  or with third-parties, except when required to by law. All the
+                  responses from the complaint will be stay anonymous as we dont
+                  collect personal user data from it.
+                </strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-------------------------------------------- Features Table-------------------------------------------->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
