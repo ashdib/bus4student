@@ -4,8 +4,8 @@ const busSchedules = [
   {
     route: 1,
     days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-    waitingPoint: ["KPZ", "KTAG"],
-    destinationPoint: "Main Campus",
+    waitingPoint: "KPZ",
+    destinationPoint: "MainCampus",
     busWaitingTime: [
       {
         dayPeriod: "morning",

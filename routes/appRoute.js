@@ -1,8 +1,8 @@
 // This file will define the routes that refer to the internal API for bus scheduling
 import express from "express";
 const router = express.Router();
-import scheduleController from "../controllers/appController.js";
+import scheduleDataStore from "../controllers/appController.js";
 
-router.get("/schedule", scheduleController);
+router.get("/schedule", scheduleDataStore);
 
 export default router;
