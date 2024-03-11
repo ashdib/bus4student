@@ -3,7 +3,7 @@ const busSchedules = [
   // TODO: first route data
   {
     route: 1,
-    days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    days: ["Mon", "Tue", "Wed", "Thu", "Fri"],
     waitingPoint: "KPZ",
     destinationPoint: "MainCampus",
     busWaitingTime: [
@@ -52,7 +52,7 @@ const busSchedules = [
     ],
     busOperateContinuouslyTime: [
       { dayPeriod: "morning", timeStart: "7:00", timeEnd: "10:00" },
-      { dayPeriod: "noon", timeStart: "12:00", timeEnd: "14:00" },
+      { dayPeriod: "afternoon", timeStart: "12:00", timeEnd: "14:00" },
       { dayPeriod: "evening", timeStart: "16:00", timeEnd: "19:00" },
     ],
   },
@@ -60,8 +60,8 @@ const busSchedules = [
   {
     route: 2,
     days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-    waitingPoint: "Perhentian Bas Serumpun",
-    destinationPoint: "Main Campus",
+    waitingPoint: "SERUMPUN",
+    destinationPoint: "MainCampus",
     busWaitingTime: [
       {
         dayPeriod: "morning",

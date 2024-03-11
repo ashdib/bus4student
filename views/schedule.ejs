@@ -26,25 +26,29 @@
         style="width: 60%"
       >
         <!-- TODO: Date Card -->
-        <div class="card mb-3 mb-md-0 flex-grow-1">
+        <div
+          class="card mb-2 mb-md-0 flex-grow-1 justify-content-center align-items-center"
+        >
           <div class="card-body">
-            <h5 class="card-title">Date</h5>
-            <p class="card-subtitle" id="date">Loading...</p>
+            <% locals.infoBarObject %>
+            <h5 class="card-title"><%= infoBarObject.date %></h5>
           </div>
         </div>
         <!-- TODO: Time Card -->
-        <div class="card mb-3 mb-md-0 flex-grow-1 mx-md-3">
+        <div
+          class="card flex-grow-1 mb-2 mb-md-0 mx-md-1 justify-content-center align-items-center"
+        >
           <div class="card-body">
-            <h5 class="card-title">Time</h5>
-            <p class="card-text" id="time">Loading...</p>
+            <h5 class="card-title"><%= infoBarObject.time %></h5>
           </div>
         </div>
         <!-- TODO: Weather Card -->
-        <div class="card flex-grow-1">
+        <div class="card flex-grow-1 justify-content-center align-items-center">
           <div class="card-body">
-            <h5 class="card-title">Weather</h5>
-            <p class="card-text" id="weather">Loading...</p>
-            <p class="card-text" id="weather-preparation">Loading...</p>
+            <h5 class="card-title"><%= infoBarObject.currentWeather[0] %></h5>
+            <p class="card-text" id="weather">
+              <%= infoBarObject.currentWeather[1] %>
+            </p>
           </div>
         </div>
       </div>
@@ -53,7 +57,8 @@
     <!------------------------------------------------------- Search Bar with Form -------------------------------------------------------------------------------->
     <div class="container d-flex justify-content-center">
       <form
-        action="app/schedule"
+        action="/app/search-schedules"
+        method="POST"
         class="d-flex row justify-content-center align-items-center gap-2 bg-light p-4 rounded-3 mt-1"
         style="width: 50%"
       >
@@ -61,14 +66,14 @@
         <label for="waiting-point" class="mr-sm-2">Waiting Point:</label>
         <select
           id="waiting-point"
-          name="waiting-point"
+          name="waitingPoint"
           class="form-control mr-sm-2 form-select"
         >
-          <option value="kpz">KPZ</option>
-          <option value="ktag">KTAG</option>
-          <option value="perhentian bas serumpun">SERUMPUN</option>
-          <option value="k10">K10</option>
-          <option value="kmb">KMB</option>
+          <option value="KPZ">KPZ</option>
+          <option value="KTAG">KTAG</option>
+          <option value="SERUMPUN">PERHENTIAN BAS SERUMPUN</option>
+          <option value="K10">K10</option>
+          <option value="KMB">KMB</option>
           <!-- Add more options as needed -->
         </select>
         <!--   TODO: Add a form to search for a route   -->
@@ -78,20 +83,24 @@
         >
         <select
           id="destination-point"
-          name="destination-point"
+          name="destinationPoint"
           class="form-control mr-sm-2 form-select"
         >
           >
-          <option value="main_campus">Main Campus</option>
-          <option value="agro_bio">Agro Bio</option>
-          <option value="kmb">KMB</option>
+          <option value="MainCampus">Main Campus</option>
+          <option value="AgroBio">Agro Bio</option>
+
           <!-- Add more options as needed -->
         </select>
 
-        <input type="submit" value="Search" class="btn btn-primary" />
+        <button type="submit" value="Search" class="btn btn-primary">
+          Search
+        </button>
       </form>
     </div>
     <!------------------------------------------------------- Search Bar with Form -------------------------------------------------------------------------------->
+    <!------------------------------------------------------- Card of Schedules -------------------------------------------------------------------------------->
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
