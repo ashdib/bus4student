@@ -6,7 +6,8 @@ import {
   busSchedulesDataStore,
 } from "../controllers/appController.js";
 
-router.get("/schedule", scheduleDataStore);
+// FIXME: The route is not working
+router.get("/schedule",  scheduleDataStore, busSchedulesDataStore);
 
 router.post("/search-schedules", busSchedulesDataStore);
 

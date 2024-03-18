@@ -12,19 +12,23 @@ const getRoute = async (req, res) => {
   // FIXME:Problem appears when the model represent the waitingPoint as array
   try {
     // TODO: Get the waiting point and destination point from the QUERY PARAMETER of API URL
-    const day = req.query.day;
-    const waitingPoint = req.query.waitingPoint;
-    const destinationPoint = req.query.destinationPoint;
-  
+    const waitingPointUser = req.query.waitingPoint;
+    const destinationPointUser = req.query.destinationPoint;
+
     // TODO: Compare  the waitingPoint from user with the busSchedules data
     const getMatchingSchedules = busSchedules.filter((busSchedule) => {
       return (
-        busSchedule.days.includes(day) &&
-        busSchedule.waitingPoint === waitingPoint &&
-        busSchedule.destinationPoint === destinationPoint
+        busSchedule.waitingPoint.includes(waitingPointUser) &&
+        busSchedule.destinationPoint === destinationPointUser
       );
     });
-    res.status(200).json(getMatchingSchedules);
+    // check if the getMatchingSchedules is empty that means the route does not exist
+    if (getMatchingSchedules.length === 0) {
+      res.status(404).json({ message: "This route does not exist" });
+    } else {
+      // If the waiitngPoint and destinationPoint are matched, then return the bus schedule
+      res.status(200).json(getMatchingSchedules);
+    }
   } catch (error) {
     console.log(error);
   }
@@ -37,9 +41,9 @@ const getRoutebyId = async (req, res) => {
       (busSchedule) => busSchedule.route === parseInt(id)
     );
     res.status(200).json(getMatchingSchedules);
-} catch (error) {
+  } catch (error) {
     console.log(error);
   }
 };
 
-export { getAllBusSchedule, getRoute, getRoutebyId};
+export { getAllBusSchedule, getRoute, getRoutebyId };
