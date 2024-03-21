@@ -49,6 +49,7 @@ class Bus {
    */
   async getBusWaitingTimeWeekDays() {
     try {
+      // The route here does not exist for /schedule
       const getBuses = await this.getBusRoute(); //get the bus array
       //TODO: Error handling when the bus array empty(not exist of the rpute in API)
       if(!getBuses || getBuses.length === 0){

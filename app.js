@@ -12,7 +12,7 @@ const port = 3000;
 // Use the middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
-
+app.set('view cache', false);
 
 
 // -------------------------Render landing page------------------------------

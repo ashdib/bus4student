@@ -2,12 +2,12 @@
 import express from "express";
 const router = express.Router();
 import {
-  scheduleDataStore,
+  renderSchedulePage,
   busSchedulesDataStore,
 } from "../controllers/appController.js";
 
 // FIXME: The route is not working
-router.get("/schedule",  scheduleDataStore, busSchedulesDataStore);
+router.get("/schedule",  renderSchedulePage);
 
 router.post("/search-schedules", busSchedulesDataStore);
 

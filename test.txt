@@ -1,0 +1,26 @@
+     
+     Check if the busOperateContinuouslyTime
+     <% if(time === busOperateContinuouslyTime) { %> (Bus
+          operates continuously) <% } %>
+
+    Render the weekendsSchedule
+  <h3>Weekend Schedules</h3>
+      <ul>
+        <% waitingTimesWeekendsArray.forEach(function(time) { %>
+        <li><%= time %></li>
+        <% }); %>
+      </ul>
+    </div>
+
+
+    
+    <div class="container mt-4">
+      <h3>Weekday Schedules</h3>
+      <div class="card">
+        <ul class="list-group list-group-flush">
+          <% waitingTimesWeekDaysArray.forEach(function(time) { %>
+          <li class="list-group-item "><%= time %></li>
+          <% }); %>
+        </ul>
+      </div>
+    </div>
